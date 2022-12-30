@@ -28,6 +28,12 @@ jobs:
         run: |
           echo $VERSION
 
+      - name: Changelog
+        uses: Bullrich/generate-release-changelog@master
+        id: Changelog
+        env:
+          REPO: ${{ github.repository }}
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         # set variable
         with:
@@ -36,5 +42,4 @@ jobs:
           prerelease: true
           title: "Release ${{ env.VERSION }}-${{github.run_number}}"
           body: |
-              ${{ env.VERSION }}-${{github.run_number}}
-              ${{ github.event.head_commit.message }}
+            ${{ steps.Changelog.outputs.changelog }}
