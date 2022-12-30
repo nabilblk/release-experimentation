@@ -19,7 +19,7 @@ jobs:
 
       - name: "Build & test"
         run: |
-          echo "VERSION=$(echo version.txt)" >> $VERSION
+          echo "VERSION=$(echo version.txt)" >> $GITHUB_ENV
 
       - name: "Echo version"
         run: |
