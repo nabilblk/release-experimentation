@@ -6,3 +6,10 @@ TOTOTO
 
 
 Yes  ye syes 
+
+$VERSION-6
+1.0.0-10
+1.0.0-8
+1.0.0-9
+latest
+refs/heads/main
