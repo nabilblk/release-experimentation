@@ -32,7 +32,7 @@ jobs:
         # set variable
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: $VERSION-${{github.run_number}}
+          automatic_release_tag: ${{VERSION}}-${{github.run_number}}
           prerelease: true
           title: "Development Build"
           files: |
